@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffff;
+}
+
+.encabezado {
+   
+    /* Mantiene el encabezado fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    /* El encabezado cubre todo el ancho */
+    z-index: 1000;
+    /* Se mantiene por encima de otros elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border-bottom: 4px solid #003eaa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.oculto {
+    display: flex;
+}
+nav.oculto {
+    max-height: 0; /* Oculto */
+}
+
+nav:not(.oculto) {
+    max-height: 500px; /* Ajusta este valor según el contenido del menú */
+    opacity: 1;
+    visibility: visible;
+}
+nav{
+    margin-top: auto;
+    background: #06202B;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.2s ease-out, visibility 0.3s ease-out;
+}
+.nav-enlace{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 5px;
+}
+.desaparecer {
+    display: none;
+}
+
+.btn-menu {
+    background: #81E7AF;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: #004424 2px 2px 1px;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'lato', sans-serif;
+    border: none;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.autores {
+    font-size: 20px;
+    font-style: italic;
+    padding-right: 130px;
+}
+
+.codigo {
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+
+/* Texto */
+
+.nosotros {
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 50px;
+}
+
+#noss{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    margin-left: 500px;
+}
+
+.personas {
+    display: flex;
+    justify-content: center;
+    margin-left: 700px;
+    margin-top: 50px;
+    width: 1080px;
+    height: 720px;
+}

@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffff;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  input, button {
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+.encabezado {
+   
+    /* Mantiene el encabezado fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    /* El encabezado cubre todo el ancho */
+    z-index: 1000;
+    /* Se mantiene por encima de otros elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border-bottom: 4px solid #003eaa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.oculto {
+    display: flex;
+}
+nav.oculto {
+    max-height: 0; /* Oculto */
+}
+
+nav:not(.oculto) {
+    max-height: 500px; /* Ajusta este valor según el contenido del menú */
+    opacity: 1;
+    visibility: visible;
+}
+nav{
+    margin-top: auto;
+    background: #06202B;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.2s ease-out, visibility 0.3s ease-out;
+}
+.nav-enlace{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 5px;
+}
+.desaparecer {
+    display: none;
+}
+
+.btn-menu {
+    background: #81E7AF;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: #004424 2px 2px 1px;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'lato', sans-serif;
+    border: none;
+    margin-left: 60px;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.autores {
+    font-size: 20px;
+    font-style: italic;
+    padding-right: 130px;
+}
+
+.codigo {
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+.minecraft-logo {
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 40px;
+}
+
+.minecraft-logo img {
+    width: 500px;
+    /* ajusta el tamaño según lo que quieras */
+    height: auto;
+}
+
+.minecraft-logo p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px;
+    color: #2e7d32;
+    text-shadow: 2px 2px #000;
+    margin-top: 15px;
+}
+
+.boton-skins {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.boton-skins a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 3px 3px 0 #222;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.boton-skins a:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 0 #000;
+}
+
+.boton-doc {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.boton-doc a {
+    background-color: #000;
+    color: white;
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s ease;
+}
+
+.boton-doc a:hover {
+    background-color: #222;
+}
+
+.calculadora-cientifica {
+    width: 300px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.calculadora-cientifica #display {
+    width: 100%;
+    padding: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: inset 0 0 5px #ccc;
+}
+
+.calculadora-cientifica .fila {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.calculadora-cientifica button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calculadora-cientifica button:hover {
+    background-color: #0056b3;
+}
+
+hr{
+    height: 5px;
+    background: rgb(0, 195, 255);
+}
+
+.biblioteca{
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+}
+
+.logos img {
+    width: 300px;
+    /* ajusta el tamaño según lo que quieras */
+    height: auto;
+}

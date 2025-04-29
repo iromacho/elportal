@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Portal</title>
+    <link rel="stylesheet" href="ser.css">
+</head>
+<body>
+    <header class="encabezado">
+        <button class="btn-menu" onclick="accion()">Menu</button>
+        <div class="titulo">MINECRAFT</div>
+        <div class="autores">Carlos e Izan</div>
+        <div class="codigo">&lt;/&gt;</div>
+    </header>
+    <nav class="oculto">
+        <a href="../index.html" target="_blank" class="nav-enlace desaparece"><b>Inicio</b></a>
+        <a href="/m/nos.html" target="_blank" class="nav-enlace desaparece"><b>Nosotros</b></a>
+        <a href="ser.html" class="nav-enlace desaparece"><b>Servicios</b></a>
+        
+    </nav>
+    <script>
+        function accion() {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("oculto");
+    }
+    </script>
+    <section class="servicios">
+        <div class="container">
+            <h1 id="ser">Servicios</h1>
+            <p>Ofrecemos una variedad de servicios relacionados con Minecraft, incluyendo:</p>
+            <ul>
+                <li>Asesoramiento en la instalación y configuración del juego.</li>
+                <li>Creación de servidores personalizados.</li>
+                <li>Desarrollo de mods y complementos.</li>
+                <li>Soporte técnico y resolución de problemas.</li>
+            </ul>
+            <p>Si estás interesado en alguno de estos servicios, no dudes en ponerte en contacto con nosotros.</p>
+        </div>
+    </section>
+    <div id="img">
+        <img src="juegos.jpg" alt="Juegos unbloced" class="img-juegos">
+    </div>
+</body>
+</html>

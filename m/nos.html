@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Portal</title>
+    <link rel="stylesheet" href="nos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <button class="btn-menu" onclick="accion()">Menu</button>
+        <div class="titulo">MINECRAFT</div>
+        <div class="autores">Carlos e Izan</div>
+        <div class="codigo">&lt;/&gt;</div>
+    </header>
+    <nav class="oculto">
+        <a href="../index.html" target="_blank" class="nav-enlace desaparece"><b>Inicio</b></a>
+        <a href="/m/nos.html" target="_blank" class="nav-enlace desaparece"><b>Nosotros</b></a>
+        <a href="ser.html" target="_blank" class="nav-enlace desaparece"><b>Servicios</b></a>
+        
+    </nav>
+
+    <section class="nosotros">
+        <div class="container">
+            <h1 id="noss">Nosotros</h1>
+            <p>Hola, somos Carlos e Izan, dos estudiantes apasionados por la programación y el diseño web. Nos encanta crear proyectos interesantes y aprender nuevas tecnologías.</p>
+            <p>Este es un proyecto que hemos desarrollado juntos como parte de nuestro aprendizaje en el mundo de la programación. Esperamos que lo disfruten.</p>
+            <p>Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros.</p>
+        </div>
+        <div class="img">
+            <img src="nosotros.png" alt="Nosotros" class="img-nosotros">
+        </div>
+    </section>
+
+    <div class="personas">
+        <img src="personas.jpg" alt="Personas">
+    </div>
+
+    <script>
+        function accion() {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("oculto");
+    }
+    </script>
+</body>
+</html>
