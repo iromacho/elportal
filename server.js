@@ -16,11 +16,11 @@ app.use(express.json());
 
 // Rutas HTML
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/index', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'inicio.html'));
 });
 
 app.get('/signup', (req, res) => {
@@ -77,7 +77,7 @@ app.post('/registro', (req, res) => {
     });
 });
 
-app.post('/', (req, res) => {
+app.post('/login', (req, res) => {
     const { email } = req.body;
 
     // Leer archivo usuarios.txt para ver si el email existe
