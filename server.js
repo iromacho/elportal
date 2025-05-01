@@ -76,7 +76,7 @@ app.post('/registro', (req, res) => {
             console.error('Error al guardar el usuario:', err);
             return res.status(500).send('Error al guardar el usuario');
         }
-        console.log('Usuario guardado');
+        console.log('Usuario guardado Nombre: ${nombre}, Email: ${email}');
         res.send('Registro exitoso');
     });
 });
