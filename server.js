@@ -104,28 +104,5 @@ app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
 
-
-import { createClient } from '@supabase/supabase-js';
-
-// Obtén las variables de entorno
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_KEY = process.env.SUPABASE_KEY;
-
-// Crea el cliente de Supabase
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-
-// Ejemplo: Insertar un usuario en la base de datos
-async function insertarUsuario(nombre, email) {
-    const { data, error } = await supabase
-        .from('usuarios')
-        .insert([{ nombre, email }]);
-
-    if (error) {
-        console.error('Error al insertar usuario:', error);
-    } else {
-        console.log('Usuario insertado:', data);
-    }
-}
-
 // Llama a la función con datos de ejemplo
 insertarUsuario('Carlos', 'carlos@example.com');
