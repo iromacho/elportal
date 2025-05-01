@@ -120,5 +120,35 @@ app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
 
-// Llama a la función con datos de ejemplo
-insertarUsuario('Carlos', 'carlos@example.com');
+app.post('/signup', async (req, res) => {
+  const { nombre, correo, contraseña } = req.body;
+
+  try {
+    // Verificar que todos los campos estén presentes
+    if (!nombre || !correo || !contraseña) {
+      return res.status(400).json({ error: "Todos los campos son obligatorios" });
+    }
+
+    // Hashear la contraseña
+    const hashedPassword = await bcrypt.hash(contraseña, 10);
+
+    // Insertar en la base de datos
+    const result = await pool.query(
+      'INSERT INTO usuarios (nombre, correo, contraseña) VALUES ($1, $2, $3) RETURNING *',
+      [nombre, correo, hashedPassword]
+    );
+
+    res.status(201).json({
+      message: "Usuario registrado con éxito",
+      user: { id: result.rows[0].id, nombre: result.rows[0].nombre }
+    });
+  } catch (err) {
+    console.error(err);
+    if (err.code === '23505') { // Código de error para correo duplicado
+      res.status(400).json({ error: "El correo ya está registrado" });
+    } else {
+      res.status(500).json({ error: "Error del servidor" });
+    }
+  }
+});
+
