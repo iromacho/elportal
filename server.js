@@ -152,3 +152,43 @@ app.post('/signup', async (req, res) => {
   }
 });
 
+
+
+//hola
+
+app.post('/login', async (req, res) => {
+  const { correo, contraseña } = req.body;
+
+  try {
+    // Verificar que todos los campos estén presentes
+    if (!correo || !contraseña) {
+      return res.status(400).json({ error: "Todos los campos son obligatorios" });
+    }
+
+    // Buscar al usuario en la base de datos
+    const result = await pool.query('SELECT * FROM usuarios WHERE correo = $1', [correo]);
+
+    if (result.rows.length === 0) {
+      return res.status(400).json({ error: "Usuario no encontrado" });
+    }
+
+    const usuario = result.rows[0];
+
+    // Comparar la contraseña
+    const contraseñaValida = await bcrypt.compare(contraseña, usuario.contraseña);
+
+    if (!contraseñaValida) {
+      return res.status(401).json({ error: "Contraseña incorrecta" });
+    }
+
+    res.status(200).json({
+      message: "Inicio de sesión exitoso",
+      user: { id: usuario.id, nombre: usuario.nombre }
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error del servidor" });
+  }
+});
+
+
