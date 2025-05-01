@@ -4,6 +4,17 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
+
+const { Pool } = require('pg');
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
+
 // Servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'launchers')));
