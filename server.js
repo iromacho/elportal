@@ -1,23 +1,15 @@
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
-});
+const express = require('express');
+const pool = require('./db');
+const bcrypt = require('bcrypt');
 
-const createTableQuery = `
-CREATE TABLE IF NOT EXISTS usuarios (
-  id SERIAL PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  correo VARCHAR(100) UNIQUE NOT NULL,
-  contraseña VARCHAR(100) NOT NULL
-);
-`;
+const app = express();
+app.use(express.json());
 
-pool.query(createTableQuery)
-  .then(() => console.log("Tabla de usuarios creada o ya existente"))
-  .catch(err => console.error("Error al crear la tabla:", err));
+// Rutas aquí
 
-module.exports = pool;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
+
 
 
 
