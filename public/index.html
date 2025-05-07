@@ -5,38 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script>
-      function handleCredentialResponse(response) {
-        const data = parseJwt(response.credential);
-        console.log(data); // Muestra todo el perfil en consola
-  
-        // Cambia el avatar
-        document.getElementById('avatar').src = data.picture;
-        document.getElementById('nombre').textContent = data.name;
-      }
-  
-      function parseJwt(token) {
-        const base64Url = token.split('.')[1];
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        const jsonPayload = decodeURIComponent(atob(base64).split('').map(c =>
-          '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
-        ).join(''));
-        return JSON.parse(jsonPayload);
-      }
-    </script>
   </head>
 <body>
-  <div id="g_id_onload"
-  data-client_id="715937852178-3o8liednf74eg9kipl5dl0u9of403adm.apps.googleusercontent.com"
-  data-callback="handleCredentialResponse"
-  data-auto_prompt="false">
-    </div>
-    <div class="g_id_signin" data-type="standard"></div>
-
-    <!-- Avatar y nombre -->
-    <h2 id="nombre">No has iniciado sesión</h2>
-    <img id="avatar" src="https://via.placeholder.com/100" width="100" alt="Avatar">
     <div class="login-box">
       <img class="avatar" src="/id" alt="">
       <h1>Login Here</h1>
