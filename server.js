@@ -70,6 +70,9 @@ app.get('/bg', (req, res) => {
 app.get('/id', (req, res) => {
     res.sendFile(path.join(__dirname, 'logos', 'id.jpg'));
 });
+app.get('/juegos', (req, res) => {
+    res.sendFile(path.join(__dirname, 'juegos', 'index.html'));
+});
 
 // Ruta POST para guardar usuarios en usuarios.txt
 app.post('/registro', (req, res) => {
