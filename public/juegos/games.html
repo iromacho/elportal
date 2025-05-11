@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo.jpg" type="image">
+    <title>Games</title>
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="games.html">
+    <button title="Games" id="Games" class="divbutton"> Games </button> 
+  </a> 
+
+    <a href="Apps.html">
+    <button title="Apps" id="Apps" class="divbutton"> Apps</button>
+    </a>
+
+  <a href="index.html">
+    <button title="home" id="home" class="divbutton">home</button>
+  </a>
+
+  <a href="shooter.html">
+    <button title="shooter" class="divbutton">shooter</button>
+  </a>
+
+  <a href="sports.html">
+    <button title="sports" class="divbutton">Sports</button>
+  </a>
+
+  <a href="cars.html">
+    <button title="cars" class="divbutton">Cars</button>
+  </a>
+  </div>
+
+  <div class="search">
+  <input tpye="search" autocomplete="off" 
+  id="search" class="search-games" placeholder="search games.." onkeypress="searchgames()">
+</div>
+
+
+<script> function searchgames() {
+  let input = document.getElementById('search').value
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName("card");
+
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    }
+    else {
+      x[i].style.display = "block";
+      }
+    }
+  }
+
+  document.getElementById('search').addEventListener("keydown", (e) => {
+    if (e.key == "Backspace") {
+        searchgames();
+    }
+  });
+</script>
+
+
+    <script>
+    document.addEventListener("keydown", 
+    async (e) => { if ("`" == e.key) window.parent.window.location.replace("https://google.com/") });
+    </script>
+
+
+<div class="centered">
+<div class="card" onclick="window.open('/1v1 lol.html', '_self')"
+><img src="1v1 lol.png">1v1.lol</div>
+<div class="card" onclick="window.open('/2048.html', '_self')">
+<img src="2048.png"><p>2048</p></div>
+<div class="card" onclick="window.open('/among us.html', '_self')">
+<img src="among us.jpg">Among us</div>
+<div class="card" onclick="window.open('/backrooms', '_self')">
+<img src="backrooms.jpg">Backrooms</div>
+<div class="card" onclick="window.open('/basket random.html', '_self')">
+<img src="basket random.jpg">Basket random</div>
+<div class="card" onclick="window.open('/basketball stars.html', '_self')">
+<img src="basketball stars.jpg">Basketball stars</div>
+<div class="card" onclick="window.open('/basket bros.html', '_self')">
+<img src="basketbros.jpg">Basket bros</div>
+<div class="card" onclick="window.open('/bitlife.html')">
+<img src="bitlife.jpg">Bitlife</div>
+<div class="card" onclick="window.open('/bloomstd.html')">
+<img src="bloonstd.jpg">BloonsTD</div>
+<div class="card" onclick="window.open('/boxing random.html', '_self')">
+<img src="boxing random.jpg">Boxing random</div>
+<div class="card" onclick="window.open('/chrome dino.html', '_self')">
+<img src="chrome dino.png">Chrome dino</div>
+<div class="card" onclick="window.open('/cookie clicker.html', '_self')">
+<img src="cookie.png">Cookie clicker</div>
+<div class="card" onclick="window.open('/crossy road.html', '_self')">
+<img src="crossy road.jpg">Crossy road</div>
+<div class="card" onclick="window.open('/csgo clicker.html', '_self')">
+<img src="csgo clicker.png"><p>Csgo clicker</p></div> 
+<div class="card" onclick="window.open('/deadshot.html', '_self')">
+<img src="deadshot.jpg">Deadshot.io</div>
+<div class="card" onclick="window.open('/death run3d.html', '_self')">
+<img src="death run3D.png">Death run 3D</div>
+<div class="card" onclick="window.open('/draw the hill.html', '_self')">
+<img src="draw the hill.jpg">Draw the hill</div>
+<div class="card" onclick="window.open('/drift boss.html', '_self')">
+<img src="drift boss.png"><p>Drift boss</p></div>
+<div class="card" onclick="window.open('/drift io.html', '_self')">
+<img src="drift io.jpg">Drift.io</div>
+<div class="card" onclick="window.open('/drive mad.html', '_self')">
+<img src="drive mad.jpg">Drive mad</div>
+<div class="card"onclick="window.open('/eaglercraft.html', '_self')">
+<img src="eaglercraft.png">Eaglercraft</div>
+<div class="card" onclick="window.open('/eggy car.html', '_self')">
+<img src="eggy car.jpg">Eggy car</div>
+<div class="card" onclick="window.open('/ev io.html', '_self')">
+<img src="ev io.jpg"><p>Ev.io</p></div>
+<div class="card" onclick="window.open('/flappy bird.html', '_self')">
+<img src="flappy bird.png">Flappy bird</div>
+<div class="card" onclick="window.open('/fruit ninja.html', '_self')">
+<img src="Fruit Ninja.jpg">Fruit ninja</div>
+<div class="card" onclick="window.open('/geometry dash.html', '_self')">
+<img src="geometry dash.jpg">Geometry dash</div> 
+<div class="card" onclick="window.open('/idle breakout.html', '_self')">
+<img src="idle breakout.png"><p>Idle breakout</p></div>
+<div class="card" onclick="window.open('/infinite craft.html', '_self')">
+<img src="infintie craft.png">Infinite craft</div>
+<div class="card" onclick="window.open('/krunker.html', '_self')">
+<img src="krunker.png">Krunker.io</div>
+<div class="card" onclick="window.open('/lolshot.html', '_self')">
+<img src="lolshot.jpg">Lolshot.io</div>
+<div class="card" onclick="window.open('/madilin stuntcars.html', '_self')">
+<img src="madalin stuncars.jpg">Madalin stunt cars 3</div>
+<div class="card" onclick="window.open('/mario 64.html', '_self')">
+<img src="super mario.png">Super mario 64</div>
+<div class="card" onclick="window.open('/mario.html', '_self')">
+<img src="Mario.gif">Mario</div>
+<div class="card" onclick="window.open('/minecraft classic.html', '_self')">
+<img src="minecraft classic.png">Minecraft classic</div>
+<div class="card" onclick="window.open('/monkey mart.html', '_self')">
+<img src="monkey mart.jpg">Monkey mart</div>
+<div class="card" onclick="window.open('/paper io.html', '_self')">
+<img src="paper io.png">Paper.io</div>
+<div class="card" onclick="window.open('/retro bowl.html', '_self')">
+<img src="retro bowl.jpg">Retro Bowl</div>
+<div class="card" onclick="window.open('/run3.html', '_self')">
+<img src="run3.jpg"><p>Run 3</p></div>
+<div class="card" onclick="window.open('/samta tracker.html', '_self')">
+<img src="santa tracker.png">Santa tracker</div>
+<div class="card" onclick="window.open('/scrap metal3.html', '_self')">
+<img src="scrap metal 3.png">Scrap metal 3</div>
+<div class="card" onclick="window.open('/shellshockers.html', '_self')">
+<img src="shellshockers.jpg"><p>Shell shockers</p></div>
+<div class="card" onclick="window.open('/slope.html', '_self')">
+<img src="slope.jpg">Slope</div>
+<div class="card" onclick="window.open('/slope2.html', '_self')">
+<img src="slope2.png">Slope 2</div>
+<div class="card" onclick="window.open('/slow roads.html', '_self')">
+<img src="slow roads.jpg"><p>Slow roads.io</p></div>
+<div class="card" onclick="window.open('/smash karts.html', '_self')">
+<img src="smash karts.jpg">Smash karts</div>
+<div class="card" onclick="window.open('/snake.html', '_self')">
+<img src="snake.jpg">Snake</div>
+<div class="card" onclick="window.open('/snow rider 3d.html', '_self')">
+<img src="snow rider 3D.jpg">Snow rider 3D</div>
+<div class="card" onclick="window.open('/soccer random.html', '_self')">
+<img src="soccer random.jpg">Soccer random</div>
+<div class="card" onclick="window.open('/spidey swing.html', '_self')">
+<img src="spidey swing.jpg">Spidey swing</div>
+<div class="card" onclick="window.open('/temple run2.html', '_self')">
+<img src="temple run2.png">Temple run2</div>
+<div class="card" onclick="window.open('/tube jumpers.html', '_self')">
+<img src="tube jumpers.jpg"><p>Tube jumpers</p></div>
+<div class="card" onclick="window.open('/tunnel rush.html', '_self')">
+<img src="tunnel rush.jpg">Tunnel rush</div>
+<div class="card" onclick="window.open('/venge.io.html', '_self')">
+<img src="venge.jpg">Venge.io</div>
+<div class="card" onclick="window.open('/volly random.html', '_self')">
+<img src="volly random.jpg">Volly random</div>
+<div class="card" onclick="window.open('/wordle.html', '_self')">
+<img src="wordle.png">Wordle</div>
+<div class="card" onclick="window.open('/worlds hardest game.html', '_self')">
+<img src="worlds hardest game.jpg">WHG</div>
+<div class="card" onclick="window.open('/worlds hardest game2.html', '_self')">
+<img src="worlds hardest game 2.jpg">WHG 2</div>
+<div class="card" onclick="window.open('/jeff bazos.html', '_self')">
+<img src="JEFF BAZOS.png"><p>You are jeff bazos</p></div>
+</div>
+
+</body>
+</html>
