@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'launchers')));
 app.use(express.static(path.join(__dirname, 'm')));
 app.use(express.static(path.join(__dirname, 'logos')));
+app.use(express.static(path.join(__dirname, 'juegos')));
 
 // Middleware para procesar formularios
 app.use(express.urlencoded({ extended: true }));
