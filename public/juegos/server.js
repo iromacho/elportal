@@ -12,6 +12,6 @@ iframe.src = self.location;
 tab.document.body.appendChild(iframe);
 }
 
-app.get('/juegos', (req, res) => {
+app.get('/google', (req, res) => {
     res.sendFile(path.join(__dirname, 'juegos', 'google.html'));
 });
