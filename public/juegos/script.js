@@ -11,7 +11,3 @@ stl.left = stl.right = stl.top = stl.bottom = '0';
 iframe.src = self.location;
 tab.document.body.appendChild(iframe);
 }
-
-app.get('/google', (req, res) => {
-    res.sendFile(path.join(__dirname, 'juegos', 'google.html'));
-});
