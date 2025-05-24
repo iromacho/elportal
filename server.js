@@ -74,6 +74,18 @@ app.get('/id', (req, res) => {
 app.get('/juegos', (req, res) => {
     res.sendFile(path.join(__dirname, 'juegos', 'index.html'));
 });
+app.get('/tw-defense', (req, res) => {
+    res.sendFile(path.join(__dirname, 'launchers', 'tw-defense.html'));
+});
+app.get('/tw-defense-logo', (req, res) => {
+    res.sendFile(path.join(__dirname, 'logos', 'tw-defense-logo.png'));
+});
+app.get('/ds-launch', (req, res) => {
+    res.sendFile(path.join(__dirname, 'launchers', 'ds-launch.html'));
+});
+app.get('/ds-logo', (req, res) => {
+    res.sendFile(path.join(__dirname, 'logos', 'ds-logo.png'));
+});
 
 // Ruta POST para guardar usuarios en usuarios.txt
 app.post('/registro', (req, res) => {
