@@ -86,6 +86,12 @@ app.get('/ds-launch', (req, res) => {
 app.get('/ds-logo', (req, res) => {
     res.sendFile(path.join(__dirname, 'logos', 'ds-logo.png'));
 });
+app.get('/dino', (req, res) => {
+    res.sendFile(path.join(__dirname, 'launchers', 'dino.html'));
+});
+app.get('/dino-img', (req, res) => {
+    res.sendFile(path.join(__dirname, 'logos', 'dino-img.png'));
+});
 
 // Ruta POST para guardar usuarios en usuarios.txt
 app.post('/registro', (req, res) => {
