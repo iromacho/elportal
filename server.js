@@ -95,7 +95,7 @@ app.get('/dino-img', (req, res) => {
 app.get('/launcher.1', (req, res) => {
     res.sendFile(path.join(__dirname, 'launchers', 'launcher.1.html'));
 });
-app.get('/imgminec1', (req, res) => {
+app.get('/imgminec.1', (req, res) => {
     res.sendFile(path.join(__dirname, 'logos', 'eaglercraft.png'));
 });
 
