@@ -92,6 +92,12 @@ app.get('/dino', (req, res) => {
 app.get('/dino-img', (req, res) => {
     res.sendFile(path.join(__dirname, 'logos', 'dino-img.png'));
 });
+app.get('/launcher.1', (req, res) => {
+    res.sendFile(path.join(__dirname, 'launchers', 'launcher.1.html'));
+});
+app.get('/imgminec1', (req, res) => {
+    res.sendFile(path.join(__dirname, 'logos', 'eaglercraft.png'));
+});
 
 // Ruta POST para guardar usuarios en usuarios.txt
 app.post('/registro', (req, res) => {
